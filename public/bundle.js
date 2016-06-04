@@ -19590,8 +19590,29 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var App = function (_React$Component) {
-  _inherits(App, _React$Component);
+var Greeter = function (_React$Component) {
+  _inherits(Greeter, _React$Component);
+
+  function Greeter() {
+    _classCallCheck(this, Greeter);
+
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(Greeter).apply(this, arguments));
+  }
+
+  _createClass(Greeter, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement('h1', null, 'Hello ', this.props.name);
+    }
+  }]);
+
+  return Greeter;
+}(_react2.default.Component);
+
+var GreeterFactory = _react2.default.createFactory(Greeter);
+
+var App = function (_React$Component2) {
+  _inherits(App, _React$Component2);
 
   function App() {
     _classCallCheck(this, App);
@@ -19602,7 +19623,7 @@ var App = function (_React$Component) {
   _createClass(App, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement('h1', null, 'Hello React!');
+      return _react2.default.createElement(Greeter, { name: ' reactors!' });
     }
   }]);
 
