@@ -1,9 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+class Greeter extends React.Component {
+ render() {
+	return <h1>Hello {this.props.name}</h1>
+    }
+}
+const GreeterFactory = React.createFactory(Greeter);
+
 class App extends React.Component {
   render() {
-	return <h1>Hello React!</h1>
+        return <Greeter name=" reactors!" />;
   }
 }
 
