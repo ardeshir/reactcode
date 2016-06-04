@@ -1,0 +1,11 @@
+node_modules
+*~
+static
+src
+.grunt
+build/
+coverage
+docs/*
+test/*
+*.log*
+
